@@ -25,20 +25,22 @@ public class MapAndFilter {
 
     public List<PlayerDetails> getSportDetails() throws IOException {
         List<PlayerDetails> addData = new ArrayList<>();
-//        List<SportDetails> sport = PlayerData.getSport();
-//        log.info("hello1", sport);
-//        System.out.println(sport);
+        List<SportDetails> sport = PlayerData.getSport();
+        log.info("hello1", sport);
+        System.out.println(sport);
+//        List<PlayerDetails> details = Stream.of(player).map(details1:: Player);
 
         for (PlayerDetails playerDetails : PlayerData.getPlayers()) {
             System.out.println("hello2");
 
-            if (PlayerData.getPlayers().contains(playerDetails.getFavourite_sport())) {
+            if (PlayerData.getPlayers().contains(playerDetails.getFavourite_sport().equalsIgnoreCase("Soccer"))) {
                 System.out.println("hello 3");
                 log.info("hello");
                 addData.add(playerDetails);
                 log.info("hellos", addData);
             }
         }
+
         System.out.println(addData);
         return addData;
     }
