@@ -1,14 +1,10 @@
 {
-  "favorite_sports": [
+  "favourite_sports": [
     "Soccer",
     "Tennis",
     "Basketball",
     "Swimming",
     "Baseball",
-    "Volleyball",
-    "Golf",
-    "Gymnastics",
-    "Rugby",
-    "Athletics"
-  ]
+    "Volleyball"
+    ]
 }
