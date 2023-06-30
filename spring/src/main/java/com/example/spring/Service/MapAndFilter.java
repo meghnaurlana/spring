@@ -1,6 +1,5 @@
 package com.example.spring.Service;
 
-
 import com.example.spring.Dto.SportDetails;
 import com.example.spring.MockData.PlayerData;
 import com.example.spring.Entity.PlayerDetails;
@@ -25,23 +24,17 @@ public class MapAndFilter {
 
     public List<PlayerDetails> getSportDetails() throws IOException {
         List<PlayerDetails> addData = new ArrayList<>();
-        List<SportDetails> sport = PlayerData.getSport();
-        log.info("hello1", sport);
-        System.out.println(sport);
-//        List<PlayerDetails> details = Stream.of(player).map(details1:: Player);
-
+        SportDetails details = PlayerData.getSport();
+        System.out.println("details "+details);
+        System.out.println("get Player " + PlayerData.getPlayers());
+        System.out.println("get sport "+ PlayerData.getSport().getFavourite_sports());
+        System.out.println("condition "+PlayerData.getPlayers().contains(PlayerData.getSport().getFavourite_sports()));
         for (PlayerDetails playerDetails : PlayerData.getPlayers()) {
-            System.out.println("hello2");
-
-            if (PlayerData.getPlayers().contains(playerDetails.getFavourite_sport().equalsIgnoreCase("Soccer"))) {
-                System.out.println("hello 3");
-                log.info("hello");
+            if (PlayerData.getPlayers().contains(PlayerData.getSport().getFavourite_sports())) {
                 addData.add(playerDetails);
-                log.info("hellos", addData);
+                System.out.println("addData" + addData);
             }
         }
-
-        System.out.println(addData);
         return addData;
     }
 

@@ -24,7 +24,7 @@ public class PlayerController {
 
     }
     @GetMapping("/getAll")
-    public List<SportDetails> getDetails() throws IOException, ParseException {
+    public SportDetails getDetails() throws IOException, ParseException {
         return PlayerData.getSport();
     }
 @GetMapping("/newData")
