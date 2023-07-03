@@ -3,7 +3,6 @@ package com.example.spring.MockData;
 import com.example.spring.Dto.SportDetails;
 import com.example.spring.Entity.PlayerDetails;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.List;

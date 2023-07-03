@@ -1,7 +1,5 @@
 package com.example.spring.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public  class PlayerDetails {
+public class PlayerDetails {
     public String name;
     public String favourite_sport;
     public String address;
